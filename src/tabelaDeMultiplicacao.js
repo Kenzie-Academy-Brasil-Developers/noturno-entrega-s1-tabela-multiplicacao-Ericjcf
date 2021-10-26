@@ -1,9 +1,12 @@
-function nomeDaFuncao() { 
-    // Substitua "nomeDaSuaFuncao" por um nome mais apropriado
-    // TODO: escrever dois loops aninhados para desenhar o array bidimensional e monstar o restante da tabela no console.
-    let x = [];
-    for (let i = 0; i <= 10; i++) {
-        x[i] = [];
+function vetoriza(n) {
+    n = n+1
+    let meuArray = [ ]
+    for (let indice = 0; indice < n; indice++) {
+        meuArray.push([])
+        for (let indice2 = 0; indice2 < n; indice2++) {
+            meuArray[indice].push(indice*indice2)
+        }
     }
-    console.table(x)
+    return meuArray
 }
+console.table(vetoriza(12))
